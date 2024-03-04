@@ -1,0 +1,140 @@
+styles.css
+
+.group {
+  position: relative;
+  overflow: hidden;
+}
+.group:hover::before {
+    height: 100%;
+    opacity: 1;
+  }
+  
+
+.starterkit::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-image: url('../assets/purplesmoke.png');
+  background-size: cover;
+  opacity: 0;
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out,700ms;
+  z-index: -1; 
+}
+
+.ejuice::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-image: url('../assets/ejuice.jpg');
+    background-size: cover;
+    opacity: 0;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out,700ms;
+    z-index: -1; 
+  }
+  
+  .hero {
+    background-image: url('../assets/dani.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5; /* Adjust the opacity as needed */
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/dani.png') no-repeat center;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+  
+
+  .login {
+    background-image: url('../assets/vaping.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    height: 450px; 
+    width: 100%;
+    opacity: .9;
+
+  }
+
+
+  .text-gradient {
+    background: linear-gradient(to right, #623288 10%, #ffffff 40%); /* Replace these colors with your desired gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-gradient2 {
+    background: linear-gradient(to right, #623288 40%, #ffffff 60%); /* Replace these colors with your desired gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+/* animation for product background */
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.active {
+  color: #623288; 
+  font-weight: bold; 
+  border-bottom: 2px solid #623288; 
+  padding-bottom: 2px; 
+}
+
+.mobile-menu-item {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 414px) {
+  .nav {
+    width: 100%;
+  }
+}
+
+/* In your CSS file */
+@media (min-width: 768px) {
+  .points-system-container {
+    padding: 0 32px; /* Adjust padding as needed */
+  }
+
+  .points-system-container .grid-cols-1 {
+    grid-gap: 20px; /* Adjust the grid gap to create space between items */
+  }
+
+  .points-system-container .grid-cols-3 {
+    grid-gap: 20px; /* Adjust the grid gap to create space between items */
+  }
+}
+
